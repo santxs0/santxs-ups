@@ -462,8 +462,13 @@
         function renderRefs() {
             const container = document.getElementById('refsContainer');
             container.innerHTML = '';
+            const isLocal = window.location.protocol === 'file:';
+
             for (let i = 1; i <= 10; i++) {
-                const path = `public/refs/ref-${i}.jpeg`;
+                let path = `public/refs/ref-${i}.jpeg`;
+                if (!isLocal) {
+                    path = path.replace('public/', '');
+                }
                 container.innerHTML += `
                     <div class="aspect-square relative group cursor-pointer overflow-hidden rounded-2xl border border-white/10 transition-all hover:border-purpleGamer-accent" onclick="openLightbox('${path}')">
                         <img src="${path}" alt="Referência ${i}" loading="lazy" class="w-full h-full object-cover transition-transform group-hover:scale-110">
@@ -478,7 +483,14 @@
         function openLightbox(src) {
             const lb = document.getElementById('lightbox');
             const img = document.getElementById('lightboxImg');
-            img.src = src;
+
+            const isLocal = window.location.protocol === 'file:';
+            let finalSrc = src;
+            if (!isLocal && finalSrc.startsWith('public/')) {
+                finalSrc = finalSrc.replace('public/', '');
+            }
+
+            img.src = finalSrc;
             lb.classList.remove('hidden');
             lb.classList.add('flex');
         }
