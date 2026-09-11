@@ -99,12 +99,12 @@
         <button onclick="toggleMenu()" class="absolute top-6 right-6 text-gray-400 hover:text-white">
             <i data-lucide="x" size="32"></i>
         </button>
-        <button onclick="showSection('home'); toggleMenu()" class="nav-link text-2xl font-bold uppercase tracking-widest text-gray-400">Início</button>
-        <button onclick="showSection('ups'); toggleMenu()" class="nav-link text-2xl font-bold uppercase tracking-widest text-gray-400">UPS / Preços</button>
-        <button onclick="showSection('fruits'); toggleMenu()" class="nav-link text-2xl font-bold uppercase tracking-widest text-gray-400">Frutas</button>
-        <button onclick="showSection('refs'); toggleMenu()" class="nav-link text-2xl font-bold uppercase tracking-widest text-gray-400">Referências</button>
-        <button onclick="showSection('contact'); toggleMenu()" class="nav-link text-2xl font-bold uppercase tracking-widest text-gray-400">Contato</button>
-        <button onclick="showSection('contact'); toggleMenu()" class="px-8 py-4 bg-purpleGamer-accent text-white font-bold rounded-full uppercase tracking-tighter purple-glow">
+        <button onclick="showSection('home')" class="nav-link text-2xl font-bold uppercase tracking-widest text-gray-400">Início</button>
+        <button onclick="showSection('ups')" class="nav-link text-2xl font-bold uppercase tracking-widest text-gray-400">UPS / Preços</button>
+        <button onclick="showSection('fruits')" class="nav-link text-2xl font-bold uppercase tracking-widest text-gray-400">Frutas</button>
+        <button onclick="showSection('refs')" class="nav-link text-2xl font-bold uppercase tracking-widest text-gray-400">Referências</button>
+        <button onclick="showSection('contact')" class="nav-link text-2xl font-bold uppercase tracking-widest text-gray-400">Contato</button>
+        <button onclick="showSection('contact')" class="px-8 py-4 bg-purpleGamer-accent text-white font-bold rounded-full uppercase tracking-tighter purple-glow">
             Comprar UPS
         </button>
     </div>
@@ -380,12 +380,16 @@
 
         function toggleMenu() {
             const menu = document.getElementById('mobileMenu');
+            const body = document.body;
+
             if (menu.classList.contains('hidden')) {
                 menu.classList.remove('hidden');
                 menu.classList.add('flex');
+                body.style.overflow = 'hidden';
             } else {
                 menu.classList.remove('flex');
                 menu.classList.add('hidden');
+                body.style.overflow = '';
             }
         }
 
