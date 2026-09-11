@@ -327,20 +327,37 @@
         };
 
         function getImageUrl(itemName, itemImageLink) {
-            if (itemImageLink) {
-                // Se for um caminho local (começa com public/), retorna direto
-                if (itemImageLink.startsWith('public/') || itemImageLink.startsWith('/')) {
-                    return itemImageLink;
+            if (!itemImageLink) {
+                const lowerName = itemName.toLowerCase();
+                for (const [key, url] of Object.entries(ITEM_IMAGES)) {
+                    if (lowerName.includes(key.toLowerCase())) {
+                        return `https://images.weserv.nl/?url=${encodeURIComponent(url)}`;
+                    }
                 }
+                return '';
+            }
+
+            if (itemImageLink.startsWith('http')) {
                 return `https://images.weserv.nl/?url=${encodeURIComponent(itemImageLink)}`;
             }
-            const lowerName = itemName.toLowerCase();
-            for (const [key, url] of Object.entries(ITEM_IMAGES)) {
-                if (lowerName.includes(key.toLowerCase())) {
-                    return `https://images.weserv.nl/?url=${encodeURIComponent(url)}`;
+
+            // Lógica Mágica: Detecta se está abrindo o arquivo localmente ou em servidor (Vercel/Live Server)
+            const isLocal = window.location.protocol === 'file:';
+            let path = itemImageLink;
+
+            if (isLocal) {
+                // No PC, precisa do 'public/' no início
+                if (!path.startsWith('public/')) {
+                    path = 'public/' + path.replace(/^\//, '');
+                }
+            } else {
+                // Na Vercel/Servidor, NÃO pode ter o 'public/' no início
+                if (path.startsWith('public/')) {
+                    path = path.replace('public/', '');
                 }
             }
-            return '';
+
+            return path;
         }
 
         function showSection(sectionId) {
