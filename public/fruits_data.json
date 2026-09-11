@@ -1,0 +1,14 @@
+{
+  "fruits": [
+    { "name": "Yellow Lightning", "price": "R$ 20,00", "image": "public/fruits/yellow-lightning.webp" },
+    { "name": "Tiger", "price": "R$ 10,00", "image": "public/fruits/tiger.webp" },
+    { "name": "Yeti", "price": "R$ 7,50", "image": "public/fruits/yeti.webp" },
+    { "name": "Gás", "price": "R$ 5,00", "image": "public/fruits/gas.webp" },
+    { "name": "Dough", "price": "R$ 4,00", "image": "public/fruits/dough.webp" },
+    { "name": "Spirit", "price": "R$ 3,00", "image": "public/fruits/spirit.webp" },
+    { "name": "T-Rex", "price": "R$ 3,00", "image": "public/fruits/t-rex.webp" },
+    { "name": "Venom", "price": "R$ 3,00", "image": "public/fruits/venom.webp" },
+    { "name": "Mamute", "price": "R$ 2,00", "image": "public/fruits/mamute.webp" },
+    { "name": "Shadow", "price": "R$ 1,00", "image": "public/fruits/shadow.webp" }
+  ]
+}

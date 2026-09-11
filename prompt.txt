@@ -1,0 +1,142 @@
+Crie um site moderno, profissional e responsivo para uma loja de UPS de Blox Fruits chamada SANTXS UPS.
+
+Identidade visual
+
+- Nome da loja: Santxs UPS
+- Logo: utilizar exatamente o arquivo "santxsups-logo" fornecido no projeto.
+- Não recriar, modificar ou substituir a logo.
+- Visual moderno, gamer e premium, inspirado no universo de Blox Fruits.
+- Interface limpa, organizada e fácil de usar.
+- Responsivo para celular, tablet e computador.
+- Utilizar animações suaves e discretas.
+
+Tabela de preços dos UPS
+
+Utilize o arquivo:
+
+"/tabela.txt"
+
+Esse arquivo é a fonte oficial dos preços dos UPS.
+
+- Ler todas as informações do arquivo.
+- Não inventar, modificar ou arredondar preços.
+- Preservar os nomes e valores exatamente como estão no arquivo.
+- Organizar os UPS em uma tabela ou cards modernos.
+- Caso existam categorias diferentes, separá-las visualmente.
+- Adicionar pesquisa/filtro se houver muitos UPS.
+
+Imagens dos UPS
+
+Para cada UPS exibido na tabela:
+
+1. Identificar o nome do UPS.
+2. Procurar uma imagem correspondente pelo nome na Blox Fruits Wiki.
+3. Utilizar somente uma imagem que corresponda claramente ao item.
+4. Não utilizar imagens aleatórias ou de itens diferentes.
+5. Se não for encontrada uma imagem correspondente, deixar o espaço da imagem vazio ou ocultar a imagem, sem colocar uma imagem substituta.
+6. O preço e o nome devem continuar sendo obtidos exclusivamente de "tabela.txt".
+
+Tabela de frutas
+
+Utilize o arquivo:
+
+"/frutas.txt"
+
+Esse arquivo é a fonte oficial das frutas e respectivos dados exibidos no site.
+
+- Ler todas as frutas presentes no arquivo.
+- Não inventar frutas ou valores.
+- Preservar os nomes e valores do arquivo.
+- Criar uma seção própria para as frutas.
+- Organizar as frutas em cards modernos.
+- Adicionar pesquisa para encontrar rapidamente uma fruta.
+
+Imagens das frutas
+
+Para cada fruta:
+
+1. Utilizar o nome da fruta presente em "frutas.txt" para procurar sua imagem na Blox Fruits Wiki.
+2. A imagem deve corresponder àquela fruta.
+3. Não utilizar imagens genéricas, aleatórias ou de outra fruta.
+4. Se a imagem não for encontrada na Wiki, não substituir por outra imagem.
+5. Nesse caso, deixar o card sem imagem ou utilizar somente o espaço reservado para imagem.
+6. Nunca inventar uma imagem ou associação entre imagem e fruta.
+
+Referências
+
+Existe uma pasta:
+
+"/refs"
+
+Dentro dela estão minhas referências.
+
+- Carregar todas as imagens dessa pasta.
+- As referências estão enumeradas.
+- Exibir exatamente na ordem numérica:
+  "ref 1 → ref 2 → ref 3 → ref 4 → ..."
+- Não alterar a ordem.
+- Criar uma seção chamada "Referências".
+- Utilizar uma galeria moderna.
+- Ao clicar em uma referência, abrir uma visualização ampliada/lightbox.
+- A galeria deve funcionar perfeitamente no celular.
+
+Contato / Comprar UPS
+
+Criar uma seção de contato com um botão de destaque:
+
+"Entrar em contato"
+
+O Discord do vendedor possui o ID:
+
+"1128037345678077992"
+
+Criar um link de redirecionamento para esse usuário do Discord e utilizar esse link no botão.
+
+Também criar um botão:
+
+"Comprar UPS"
+
+que leva diretamente para a seção de contato.
+
+Navegação
+
+Criar um menu com:
+
+- Início
+- UPS / Preços
+- Frutas
+- Referências
+- Contato
+
+Página inicial
+
+A home deve apresentar:
+
+- Logo Santxs UPS
+- Nome SANTXS UPS
+- Uma frase curta relacionada à venda de UPS de Blox Fruits
+- Botão "Ver preços"
+- Botão "Comprar UPS"
+- Visual chamativo, porém profissional
+
+Regras de dados
+
+- "tabela.txt" = fonte dos dados e preços dos UPS.
+- "frutas.txt" = fonte dos dados e preços das frutas.
+- "/refs" = fonte exclusiva das referências.
+- "santxsups-logo" = fonte exclusiva da logo.
+- Não inventar informações que não estejam nos arquivos.
+- Não alterar preços.
+- Não alterar nomes.
+- Não alterar a ordem das referências.
+- Imagens de UPS/frutas devem ser buscadas na Blox Fruits Wiki pelo nome correspondente.
+- Se uma imagem não for encontrada, deixar sem imagem.
+- Nunca substituir uma imagem ausente por uma imagem aleatória.
+
+Responsividade e desempenho
+
+- O site deve funcionar perfeitamente em Android, iPhone, tablet e computador.
+- Otimizar imagens para carregamento rápido.
+- Utilizar lazy loading nas imagens das referências e dos itens.
+- Criar uma interface agradável mesmo quando algum item não possuir imagem.
+- Garantir que o projeto possa ser hospedado na Vercel.

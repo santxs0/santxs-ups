@@ -1,0 +1,11 @@
+## FRUTAS
+> - 1x Yellow Lightning: R$ 20,00
+> - 1x Tiger: R$ 10,00
+> - 1x Yeti: R$ 7,50
+> - 1x Gás: R$ 5,00
+> - 1x Dough: R$ 4,00
+> - 1x Spirit: R$ 3,00
+> - 1x T-Rex: R$ 3,00
+> - 1x Venom: R$ 3,00
+> - 1x Mamute: R$ 2,00
+> - 1x Shadow: R$ 1,00

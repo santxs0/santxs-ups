@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SANTXS UPS | Loja de UPS Blox Fruits</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        purpleGamer: {
+                            dark: '#0f0a1a',
+                            medium: '#1a122e',
+                            light: '#2d1b4d',
+                            accent: '#a855f7',
+                            neon: '#c084fc',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f0a1a;
+            color: white;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+        h1, h2, h3 {
+            font-family: 'Poppins', sans-serif;
+        }
+        .glass {
+            background: rgba(26, 18, 46, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(168, 85, 247, 0.2);
+        }
+        .section-hidden {
+            display: none !important;
+        }
+        .purple-glow {
+            box-shadow: 0 0 20px rgba(168, 85, 247, 0.3);
+        }
+        .nav-active {
+            color: #a855f7 !important;
+            border-bottom: 2px solid #a855f7;
+        }
+        .fade-in {
+            animation: fadeIn 0.4s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #0f0a1a; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #4a2a7a; border-radius: 10px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #a855f7; }
+    </style>
+</head>
+<body class="custom-scrollbar">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 glass border-b border-purpleGamer-accent/20 px-6 py-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-3 cursor-pointer" onclick="showSection('home')">
+                <img src="public/santxsups-logo.jpeg" alt="Logo" class="w-10 h-10 rounded-full object-cover border-2 border-purpleGamer-accent">
+                <span class="text-xl font-bold tracking-tighter hidden sm:block">SANTXS <span class="text-purpleGamer-accent">UPS</span></span>
+            </div>
+
+            <div class="hidden md:flex items-center gap-8">
+                <button onclick="showSection('home')" class="nav-link text-sm font-medium uppercase tracking-widest transition-all hover:text-purpleGamer-accent text-gray-400 py-1">Início</button>
+                <button onclick="showSection('ups')" class="nav-link text-sm font-medium uppercase tracking-widest transition-all hover:text-purpleGamer-accent text-gray-400 py-1">UPS / Preços</button>
+                <button onclick="showSection('fruits')" class="nav-link text-sm font-medium uppercase tracking-widest transition-all hover:text-purpleGamer-accent text-gray-400 py-1">Frutas</button>
+                <button onclick="showSection('refs')" class="nav-link text-sm font-medium uppercase tracking-widest transition-all hover:text-purpleGamer-accent text-gray-400 py-1">Referências</button>
+                <button onclick="showSection('contact')" class="nav-link text-sm font-medium uppercase tracking-widest transition-all hover:text-purpleGamer-accent text-gray-400 py-1">Contato</button>
+            </div>
+
+            <button onclick="showSection('contact')" class="px-5 py-2 bg-purpleGamer-accent text-white text-xs font-bold rounded-full uppercase tracking-tighter hover:bg-purpleGamer-neon transition-all purple-glow">
+                Comprar UPS
+            </button>
+        </div>
+    </nav>
+
+    <main class="pt-24 pb-12">
+        <!-- Home Section -->
+        <section id="home" class="section flex flex-col items-center justify-center min-h-[85vh] text-center px-4 fade-in">
+            <div class="relative mb-8">
+                <div class="absolute inset-0 bg-purpleGamer-accent blur-3xl opacity-30 rounded-full"></div>
+                <img src="public/santxsups-logo.jpeg" alt="SANTXS UPS Logo" class="relative w-48 h-48 object-cover rounded-full border-4 border-purpleGamer-accent shadow-2xl">
+            </div>
+            <h1 class="text-6xl md:text-8xl font-extrabold mb-4 text-white tracking-tighter">
+                SANTXS <span class="text-purpleGamer-accent">UPS</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-400 mb-12 max-w-2xl">
+                A melhor e mais confiável loja de UPS de Blox Fruits.<br>Qualidade premium, preços justos e entrega rápida.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-6">
+                <button onclick="showSection('ups')" class="px-8 py-4 bg-purpleGamer-accent text-white font-bold rounded-full flex items-center justify-center gap-2 text-lg purple-glow transition-all hover:scale-105 hover:bg-purpleGamer-neon">
+                    <i data-lucide="shopping-bag"></i> Ver Preços
+                </button>
+                <button onclick="showSection('contact')" class="px-8 py-4 bg-white text-purpleGamer-dark font-bold rounded-full flex items-center justify-center gap-2 text-lg transition-all hover:bg-gray-200 hover:scale-105">
+                    <i data-lucide="message-circle"></i> Comprar UPS
+                </button>
+            </div>
+
+            <div class="mt-24 grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl">
+                <div class="glass p-8 rounded-3xl flex flex-col items-center text-center transition-all hover:border-purpleGamer-accent">
+                    <div class="mb-4 p-4 bg-purpleGamer-dark rounded-2xl text-purpleGamer-accent"><i data-lucide="shield-check"></i></div>
+                    <h3 class="text-xl font-bold mb-2">Seguro</h3>
+                    <p class="text-gray-400">Processos transparentes e confiáveis.</p>
+                </div>
+                <div class="glass p-8 rounded-3xl flex flex-col items-center text-center transition-all hover:border-purpleGamer-accent">
+                    <div class="mb-4 p-4 bg-purpleGamer-dark rounded-2xl text-purpleGamer-accent"><i data-lucide="zap"></i></div>
+                    <h3 class="text-xl font-bold mb-2">Rápido</h3>
+                    <p class="text-gray-400">Entrega ágil para você não perder tempo.</p>
+                </div>
+                <div class="glass p-8 rounded-3xl flex flex-col items-center text-center transition-all hover:border-purpleGamer-accent">
+                    <div class="mb-4 p-4 bg-purpleGamer-dark rounded-2xl text-purpleGamer-accent"><i data-lucide="star"></i></div>
+                    <h3 class="text-xl font-bold mb-2">Premium</h3>
+                    <p class="text-gray-400">Serviços de alta qualidade para seu personagem.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- UPS Section -->
+        <section id="ups" class="section section-hidden py-12 px-4 max-w-7xl mx-auto fade-in">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-12 gap-6">
+                <h2 class="text-4xl md:text-5xl font-extrabold flex items-center gap-4">
+                    <i data-lucide="shopping-bag" class="text-purpleGamer-accent"></i>
+                    Preços <span class="text-purpleGamer-accent">UPS</span>
+                </h2>
+                <div class="relative w-full md:w-96">
+                    <i data-lucide="search" class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500"></i>
+                    <input type="text" id="upsSearch" oninput="filterUPS()" placeholder="Pesquisar item..." class="w-full pl-12 pr-4 py-3 rounded-2xl bg-purpleGamer-medium border border-white/10 focus:border-purpleGamer-accent outline-none transition-all text-white">
+                </div>
+            </div>
+            <div id="upsContainer" class="grid grid-cols-1 lg:grid-cols-2 gap-12"></div>
+        </section>
+
+        <!-- Fruits Section -->
+        <section id="fruits" class="section section-hidden py-12 px-4 max-w-7xl mx-auto fade-in">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-12 gap-6">
+                <h2 class="text-4xl md:text-5xl font-extrabold flex items-center gap-4">
+                    <i data-lucide="zap" class="text-purpleGamer-accent"></i>
+                    Tabela de <span class="text-purpleGamer-accent">Frutas</span>
+                </h2>
+                <div class="relative w-full md:w-96">
+                    <i data-lucide="search" class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500"></i>
+                    <input type="text" id="fruitSearch" oninput="filterFruits()" placeholder="Pesquisar fruta..." class="w-full pl-12 pr-4 py-3 rounded-2xl bg-purpleGamer-medium border border-white/10 focus:border-purpleGamer-accent outline-none transition-all text-white">
+                </div>
+            </div>
+            <div id="fruitsContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"></div>
+        </section>
+
+        <!-- References Section -->
+        <section id="refs" class="section section-hidden py-12 px-4 max-w-7xl mx-auto fade-in">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl md:text-5xl font-extrabold mb-4 flex items-center justify-center gap-4">
+                    <i data-lucide="star" class="text-purpleGamer-accent"></i>
+                    <span class="text-white">Referências</span>
+                </h2>
+                <p class="text-gray-400">Confira a prova de nossos serviços entregues</p>
+            </div>
+            <div id="refsContainer" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4"></div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section section-hidden py-12 px-4 max-w-4xl mx-auto fade-in">
+            <div class="glass p-12 rounded-[3rem] text-center relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-purple-500 via-purple-400 to-purple-500"></div>
+                <h2 class="text-4xl md:text-6xl font-extrabold mb-6">Entre em <span class="text-purpleGamer-accent">Contato</span></h2>
+                <p class="text-xl text-gray-400 mb-12">
+                    Pronto para dar aquele upgrade no seu personagem? <br class="hidden md:block">
+                    Clique no botão abaixo para falar diretamente conosco via Discord.
+                </p>
+                <div class="flex flex-col items-center gap-6">
+                    <a href="https://discord.com/users/1128037345678077992" target="_blank" class="px-12 py-6 bg-[#5865F2] text-white font-bold rounded-full flex items-center gap-3 text-2xl shadow-xl transition-all hover:scale-105 hover:shadow-[0_0_30px_rgba(88,101,242,0.5)]">
+                        <i data-lucide="message-circle"></i>
+                        Entrar em contato
+                        <i data-lucide="external-link" class="text-sm"></i>
+                    </a>
+                    <p class="text-gray-500 text-sm flex items-center gap-2">
+                        <i data-lucide="shield-check" class="text-green-500"></i>
+                        Compra 100% segura e garantida
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-white/5 py-8 px-6 text-center text-gray-600 text-sm">
+        <p>© <span id="year"></span> SANTXS UPS. All rights reserved. Não afiliada à Roblox ou Blox Fruits.</p>
+    </footer>
+
+    <div id="lightbox" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-black/95 backdrop-blur-sm cursor-pointer" onclick="closeLightbox()">
+        <div class="absolute top-6 right-6 text-white"><i data-lucide="x" size="32"></i></div>
+        <img id="lightboxImg" src="" class="max-w-full max-h-[90vh] rounded-xl shadow-2xl border border-white/10">
+    </div>
+
+    <script>
+        let upsData = { categories: [] };
+        let fruitsData = [];
+
+        const ITEM_IMAGES = {
+            "Kitsune Mask": "https://static.wikia.nocookie.net/roblox-blox-piece/images/f/f1/Kitsune_Mask.png",
+            "Sanguine Art": "https://static.wikia.nocookie.net/roblox-blox-piece/images/b/b2/Sanguine_Art.png",
+            "God Human": "https://static.wikia.nocookie.net/roblox-blox-piece/images/d/d4/God_Human.png",
+            "Dough": "https://static.wikia.nocookie.net/roblox-blox-piece/images/0/02/Dough_Fruit.png",
+            "T-Rex": "https://static.wikia.nocookie.net/roblox-blox-piece/images/4/4c/T-Rex_Fruit.png",
+            "Venom": "https://static.wikia.nocookie.net/roblox-blox-piece/images/7/72/Venom_Fruit.png",
+            "Mamute": "https://static.wikia.nocookie.net/roblox-blox-piece/images/4/4d/Mammoth_Fruit.png",
+            "Shadow": "https://static.wikia.nocookie.net/roblox-blox-piece/images/a/a3/Shadow_Fruit.png",
+            "Spirit": "https://static.wikia.nocookie.net/roblox-blox-piece/images/8/8b/Spirit_Fruit.png",
+            "Yellow Lightning": "https://static.wikia.nocookie.net/roblox-blox-piece/images/3/3d/Light_Fruit.png",
+            "Tiger": "https://static.wikia.nocookie.net/roblox-blox-piece/images/1/1a/Tiger_Fruit.png",
+            "Yeti": "https://static.wikia.nocookie.net/roblox-blox-piece/images/5/5c/Yeti_Fruit.png",
+            "Gás": "https://static.wikia.nocookie.net/roblox-blox-piece/images/c/cc/Gas_Fruit.png",
+        };
+
+        function getImageUrl(itemName, itemImageLink) {
+            if (itemImageLink) {
+                // Se for um caminho local (começa com public/), retorna direto
+                if (itemImageLink.startsWith('public/') || itemImageLink.startsWith('/')) {
+                    return itemImageLink;
+                }
+                return `https://images.weserv.nl/?url=${encodeURIComponent(itemImageLink)}`;
+            }
+            const lowerName = itemName.toLowerCase();
+            for (const [key, url] of Object.entries(ITEM_IMAGES)) {
+                if (lowerName.includes(key.toLowerCase())) {
+                    return `https://images.weserv.nl/?url=${encodeURIComponent(url)}`;
+                }
+            }
+            return '';
+        }
+
+        function showSection(sectionId) {
+            document.querySelectorAll('.section').forEach(s => s.classList.add('section-hidden'));
+            const target = document.getElementById(sectionId);
+            if (target) target.classList.remove('section-hidden');
+            document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('nav-active'));
+            const activeLink = Array.from(document.querySelectorAll('.nav-link')).find(l => l.getAttribute('onclick').includes(sectionId));
+            if (activeLink) activeLink.classList.add('nav-active');
+        }
+
+        function renderUPS(filter = '') {
+            const container = document.getElementById('upsContainer');
+            container.innerHTML = '';
+            let foundAny = false;
+
+            upsData.categories.forEach(catObj => {
+                const cat = catObj.name;
+                const items = catObj.items;
+                const filteredItems = items.filter(i => i.name.toLowerCase().includes(filter.toLowerCase()));
+                if (filteredItems.length === 0) return;
+
+                foundAny = true;
+                const catDiv = document.createElement('div');
+                catDiv.className = 'flex flex-col gap-6';
+                catDiv.innerHTML = `<h3 class="text-2xl font-bold border-l-4 border-purpleGamer-accent pl-4 uppercase tracking-wider text-gray-300">${cat}</h3>`;
+
+                const grid = document.createElement('div');
+                grid.className = 'grid grid-cols-1 sm:grid-cols-2 gap-4';
+
+                filteredItems.forEach(item => {
+                    const img = getImageUrl(item.name, item.image);
+                    grid.innerHTML += `
+                        <div class="glass p-4 rounded-2xl flex items-center gap-4 transition-all hover:border-purpleGamer-accent group cursor-default hover:bg-purpleGamer-medium/50">
+                            <div class="w-16 h-16 rounded-xl overflow-hidden border border-white/5 relative">
+                                <div class="absolute inset-0 flex flex-col items-center justify-center bg-purpleGamer-dark text-gray-500 img-fallback transition-opacity duration-300">
+                                    <i data-lucide="package" class="size-4 mb-1"></i>
+                                    <span class="text-[10px] uppercase font-bold">Item</span>
+                                </div>
+                                ${img ? `<img src="${img}" class="relative z-10 w-full h-full object-contain p-2" onload="this.previousElementSibling.style.opacity='0'" onerror="this.style.display='none'">` : ''}
+                            </div>
+                            <div class="flex-1">
+                                <p class="font-semibold text-gray-200 group-hover:text-white transition-colors">${item.name}</p>
+                                <p class="text-purpleGamer-accent font-bold">${item.price}</p>
+                            </div>
+                            <i data-lucide="chevron-right" class="text-gray-600 group-hover:text-purpleGamer-accent transition-colors size-4"></i>
+                        </div>
+                    `;
+                });
+
+                catDiv.appendChild(grid);
+                container.appendChild(catDiv);
+            });
+
+            if (!foundAny) {
+                container.innerHTML = `
+                    <div class="col-span-full text-center py-20">
+                        <i data-lucide="search-x" class="mx-auto size-12 text-gray-600 mb-4"></i>
+                        <p class="text-xl text-gray-400">Nenhum item encontrado para "${filter}"</p>
+                    </div>
+                `;
+            }
+
+            lucide.createIcons();
+        }
+
+        function renderFruits(filter = '') {
+            const container = document.getElementById('fruitsContainer');
+            container.innerHTML = '';
+
+            const filtered = fruitsData.filter(f => f.name.toLowerCase().includes(filter.toLowerCase()));
+
+            if (filtered.length === 0) {
+                container.innerHTML = `
+                    <div class="col-span-full text-center py-20">
+                        <i data-lucide="search-x" class="mx-auto size-12 text-gray-600 mb-4"></i>
+                        <p class="text-xl text-gray-400">Nenhuma fruta encontrada para "${filter}"</p>
+                    </div>
+                `;
+                lucide.createIcons();
+                return;
+            }
+
+            filtered.forEach(fruit => {
+                const img = getImageUrl(fruit.name, fruit.image);
+                container.innerHTML += `
+                    <div class="glass p-6 rounded-3xl flex flex-col items-center text-center transition-all hover:border-purpleGamer-accent group hover:bg-purpleGamer-medium/50">
+                        <div class="w-32 h-32 rounded-2xl overflow-hidden border border-white/5 shadow-inner mb-6 relative">
+                            <div class="absolute inset-0 flex flex-col items-center justify-center bg-purpleGamer-dark text-gray-500 img-fallback transition-opacity duration-300">
+                                <i data-lucide="package" class="size-8 mb-1"></i>
+                                <span class="text-xs uppercase font-bold">No Image</span>
+                            </div>
+                            ${img ? `<img src="${img}" class="relative z-10 w-full h-full object-contain p-4 group-hover:scale-110 transition-transform" onload="this.previousElementSibling.style.opacity='0'" onerror="this.style.display='none'">` : ''}
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2 group-hover:text-purpleGamer-accent transition-colors">${fruit.name}</h3>
+                        <p class="text-xl font-bold text-purpleGamer-accent">${fruit.price}</p>
+                    </div>
+                `;
+            });
+        }
+
+        function renderRefs() {
+            const container = document.getElementById('refsContainer');
+            container.innerHTML = '';
+            for (let i = 1; i <= 10; i++) {
+                const path = `public/refs/ref-${i}.jpeg`;
+                container.innerHTML += `
+                    <div class="aspect-square relative group cursor-pointer overflow-hidden rounded-2xl border border-white/10 transition-all hover:border-purpleGamer-accent" onclick="openLightbox('${path}')">
+                        <img src="${path}" alt="Referência ${i}" loading="lazy" class="w-full h-full object-cover transition-transform group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                            <span class="text-white font-bold text-sm">Ref ${i}</span>
+                        </div>
+                    </div>
+                `;
+            }
+        }
+
+        function openLightbox(src) {
+            const lb = document.getElementById('lightbox');
+            const img = document.getElementById('lightboxImg');
+            img.src = src;
+            lb.classList.remove('hidden');
+            lb.classList.add('flex');
+        }
+
+        function closeLightbox() {
+            const lb = document.getElementById('lightbox');
+            lb.classList.add('hidden');
+            lb.classList.remove('flex');
+        }
+
+        function filterUPS() {
+            const val = document.getElementById('upsSearch').value;
+            renderUPS(val);
+        }
+
+        function filterFruits() {
+            const val = document.getElementById('fruitSearch').value;
+            renderFruits(val);
+        }
+
+        window.onload = async () => {
+            try {
+                const [upsRes, fruitsRes] = await Promise.all([
+                    fetch('public/ups_data.json'),
+                    fetch('public/fruits_data.json')
+                ]);
+
+                upsData = await upsRes.json();
+                const fruitsJson = await fruitsRes.json();
+                fruitsData = fruitsJson.fruits;
+            } catch (e) {
+                console.error('Error loading data from JSON files:', e);
+                alert('Erro ao carregar os dados. Se estiver abrindo o arquivo localmente, tente usar um servidor local (como Live Server do VS Code).');
+            }
+
+            document.getElementById('year').textContent = new Date().getFullYear();
+            lucide.createIcons();
+            renderUPS();
+            renderFruits();
+            renderRefs();
+            showSection('home');
+        };
+    </script>
+</body>
+</html>
