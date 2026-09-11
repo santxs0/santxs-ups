@@ -82,11 +82,12 @@
                 <button onclick="showSection('ups')" class="nav-link text-sm font-medium uppercase tracking-widest transition-all hover:text-purpleGamer-accent text-gray-400 py-1">UPS / Preços</button>
                 <button onclick="showSection('fruits')" class="nav-link text-sm font-medium uppercase tracking-widest transition-all hover:text-purpleGamer-accent text-gray-400 py-1">Frutas</button>
                 <button onclick="showSection('refs')" class="nav-link text-sm font-medium uppercase tracking-widest transition-all hover:text-purpleGamer-accent text-gray-400 py-1">Referências</button>
+                <button onclick="showSection('faq')" class="nav-link text-sm font-medium uppercase tracking-widest transition-all hover:text-purpleGamer-accent text-gray-400 py-1">Dúvidas</button>
                 <button onclick="showSection('contact')" class="nav-link text-sm font-medium uppercase tracking-widest transition-all hover:text-purpleGamer-accent text-gray-400 py-1">Contato</button>
             </div>
 
             <button onclick="showSection('contact')" class="px-5 py-2 bg-purpleGamer-accent text-white text-xs font-bold rounded-full uppercase tracking-tighter hover:bg-purpleGamer-neon transition-all purple-glow">
-                Comprar UPS
+                Solicitar Up
             </button>
 
             <button onclick="toggleMenu()" class="md:hidden text-gray-400 hover:text-purpleGamer-accent transition-colors">
@@ -103,9 +104,10 @@
         <button onclick="showSection('ups')" class="nav-link text-2xl font-bold uppercase tracking-widest text-gray-400">UPS / Preços</button>
         <button onclick="showSection('fruits')" class="nav-link text-2xl font-bold uppercase tracking-widest text-gray-400">Frutas</button>
         <button onclick="showSection('refs')" class="nav-link text-2xl font-bold uppercase tracking-widest text-gray-400">Referências</button>
+        <button onclick="showSection('faq')" class="nav-link text-2xl font-bold uppercase tracking-widest text-gray-400">Dúvidas</button>
         <button onclick="showSection('contact')" class="nav-link text-2xl font-bold uppercase tracking-widest text-gray-400">Contato</button>
         <button onclick="showSection('contact')" class="px-8 py-4 bg-purpleGamer-accent text-white font-bold rounded-full uppercase tracking-tighter purple-glow">
-            Comprar UPS
+            Solicitar Up
         </button>
     </div>
 
@@ -128,8 +130,30 @@
                     <i data-lucide="shopping-bag"></i> Ver Preços
                 </button>
                 <button onclick="showSection('contact')" class="px-8 py-4 bg-white text-purpleGamer-dark font-bold rounded-full flex items-center justify-center gap-2 text-lg transition-all hover:bg-gray-200 hover:scale-105">
-                    <i data-lucide="message-circle"></i> Comprar UPS
+                    <i data-lucide="message-circle"></i> Solicitar Up
                 </button>
+            </div>
+
+            <!-- How it Works -->
+            <div class="mt-32 mb-24 w-full max-w-6xl">
+                <h2 class="text-3xl md:text-5xl font-extrabold mb-16 text-center">Como <span class="text-purpleGamer-accent">Funciona?</span></h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
+                    <div class="flex flex-col items-center text-center group">
+                        <div class="w-16 h-16 bg-purpleGamer-accent text-white rounded-full flex items-center justify-center text-2xl font-bold mb-6 purple-glow group-hover:scale-110 transition-transform">1</div>
+                        <h3 class="text-xl font-bold mb-3">Escolha o Serviço</h3>
+                        <p class="text-gray-400">Navegue por nossa tabela de preços e escolha o up que você deseja para sua conta.</p>
+                    </div>
+                    <div class="flex flex-col items-center text-center group">
+                        <div class="w-16 h-16 bg-purpleGamer-accent text-white rounded-full flex items-center justify-center text-2xl font-bold mb-6 purple-glow group-hover:scale-110 transition-transform">2</div>
+                        <h3 class="text-xl font-bold mb-3">Entre em Contato</h3>
+                        <p class="text-gray-400">Clique em "Solicitar Up" e fale conosco via Discord para combinar os detalhes.</p>
+                    </div>
+                    <div class="flex flex-col items-center text-center group">
+                        <div class="w-16 h-16 bg-purpleGamer-accent text-white rounded-full flex items-center justify-center text-2xl font-bold mb-6 purple-glow group-hover:scale-110 transition-transform">3</div>
+                        <h3 class="text-xl font-bold mb-3">Receba seu Up</h3>
+                        <p class="text-gray-400">Após a confirmação, realizamos o serviço de forma rápida, segura e profissional.</p>
+                    </div>
+                </div>
             </div>
 
             <div class="mt-24 grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl">
@@ -146,7 +170,7 @@
                 <div class="glass p-8 rounded-3xl flex flex-col items-center text-center transition-all hover:border-purpleGamer-accent">
                     <div class="mb-4 p-4 bg-purpleGamer-dark rounded-2xl text-purpleGamer-accent"><i data-lucide="star"></i></div>
                     <h3 class="text-xl font-bold mb-2">Premium</h3>
-                    <p class="text-gray-400">Serviços de alta qualidade para seu personagem.</p>
+                    <p class="text-gray-400">Serviços de alta qualidade para sua conta.</p>
                 </div>
             </div>
         </section>
@@ -193,13 +217,90 @@
             <div id="refsContainer" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4"></div>
         </section>
 
+        <!-- FAQ & Testimonials Section -->
+        <section id="faq" class="section section-hidden py-12 px-4 max-w-5xl mx-auto fade-in">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-extrabold mb-4">Dúvidas & <span class="text-purpleGamer-accent">Feedback</span></h2>
+                <p class="text-gray-400">Tudo o que você precisa saber sobre nossos serviços</p>
+            </div>
+
+            <!-- Testimonials -->
+            <div class="mb-24">
+                <h3 class="text-2xl font-bold mb-8 flex items-center justify-center gap-3">
+                    <i data-lucide="message-square" class="text-purpleGamer-accent"></i> O que dizem nossos clientes
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="glass p-6 rounded-3xl relative">
+                        <i data-lucide="quote" class="absolute top-4 right-4 text-purpleGamer-accent/20 size-8"></i>
+                        <p class="text-gray-300 italic mb-4 relative z-10">"Serviço impecável! Fiz o UP de God Human e foi entregue muito antes do prazo. Super recomendo!"</p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-purpleGamer-accent/20 flex items-center justify-center text-purpleGamer-accent font-bold">S</div>
+                            <span class="font-bold text-sm">Santi_Blox</span>
+                        </div>
+                    </div>
+                    <div class="glass p-6 rounded-3xl relative">
+                        <i data-lucide="quote" class="absolute top-4 right-4 text-purpleGamer-accent/20 size-8"></i>
+                        <p class="text-gray-300 italic mb-4 relative z-10">"Melhor preço do mercado e atendimento nota 10. Me ajudou com os frags e foi tudo tranquilo."</p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-purpleGamer-accent/20 flex items-center justify-center text-purpleGamer-accent font-bold">K</div>
+                            <span class="font-bold text-sm">KevinsUp</span>
+                        </div>
+                    </div>
+                    <div class="glass p-6 rounded-3xl relative">
+                        <i data-lucide="quote" class="absolute top-4 right-4 text-purpleGamer-accent/20 size-8"></i>
+                        <p class="text-gray-300 italic mb-4 relative z-10">"Tinha medo de ser golpe, mas o SANTXS é honesto demais. Já fiz 3 serviços e todos perfeitos."</p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-purpleGamer-accent/20 flex items-center justify-center text-purpleGamer-accent font-bold">M</div>
+                            <span class="font-bold text-sm">Master_Fruit</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Accordion -->
+            <div>
+                <h3 class="text-2xl font-bold mb-8 flex items-center justify-center gap-3">
+                    <i data-lucide="help-circle" class="text-purpleGamer-accent"></i> Perguntas Frequentes
+                </h3>
+                <div class="flex flex-col gap-4">
+                    <div class="glass rounded-2xl overflow-hidden transition-all hover:border-purpleGamer-accent">
+                        <button onclick="toggleFaq(this)" class="w-full px-6 py-4 flex justify-between items-center text-left font-semibold group">
+                            <span>É seguro comprar UPS?</span>
+                            <i data-lucide="chevron-down" class="size-5 text-gray-500 group-hover:text-purpleGamer-accent transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-answer hidden px-6 pb-4 text-gray-400 text-sm leading-relaxed">
+                            Sim, nosso processo é totalmente transparente. Temos centenas de referências e prints de clientes satisfeitos na aba de Referências. Jamais solicitamos dados que coloquem sua conta em risco desnecessário.
+                        </div>
+                    </div>
+                    <div class="glass rounded-2xl overflow-hidden transition-all hover:border-purpleGamer-accent">
+                        <button onclick="toggleFaq(this)" class="w-full px-6 py-4 flex justify-between items-center text-left font-semibold group">
+                            <span>Quanto tempo demora a entrega?</span>
+                            <i data-lucide="chevron-down" class="size-5 text-gray-500 group-hover:text-purpleGamer-accent transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-answer hidden px-6 pb-4 text-gray-400 text-sm leading-relaxed">
+                            O tempo varia dependendo do serviço. Alguns são instantâneos, outros podem levar algumas horas. Sempre informamos o prazo exato no momento do fechamento via Discord.
+                        </div>
+                    </div>
+                    <div class="glass rounded-2xl overflow-hidden transition-all hover:border-purpleGamer-accent">
+                        <button onclick="toggleFaq(this)" class="w-full px-6 py-4 flex justify-between items-center text-left font-semibold group">
+                            <span>Quais as formas de pagamento?</span>
+                            <i data-lucide="chevron-down" class="size-5 text-gray-500 group-hover:text-purpleGamer-accent transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-answer hidden px-6 pb-4 text-gray-400 text-sm leading-relaxed">
+                            Atualmente trabalhamos prioritariamente com Pix, garantindo a confirmação imediata do pagamento e agilidade no início do serviço.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Contact Section -->
         <section id="contact" class="section section-hidden py-12 px-4 max-w-4xl mx-auto fade-in">
             <div class="glass p-12 rounded-[3rem] text-center relative overflow-hidden">
                 <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-purple-500 via-purple-400 to-purple-500"></div>
                 <h2 class="text-4xl md:text-6xl font-extrabold mb-6">Entre em <span class="text-purpleGamer-accent">Contato</span></h2>
                 <p class="text-xl text-gray-400 mb-12">
-                    Pronto para dar aquele upgrade no seu personagem? <br class="hidden md:block">
+                    Pronto para dar aquele up na sua conta? <br class="hidden md:block">
                     Clique no botão abaixo para falar diretamente conosco via Discord.
                 </p>
                 <div class="flex flex-col items-center gap-6">
@@ -233,29 +334,29 @@
             {
               "name": "DIVERSOS",
               "items": [
-                { "name": "Level(100)", "price": "R$ 0,90", "image": "public/ups/level.png" },
-                { "name": "Maestria(100)", "price": "R$ 0,70", "image": "public/ups/level.png" },
-                { "name": "Money(1m)", "price": "R$ 0,50", "image": "public/ups/money.webp" },
-                { "name": "Magnet Tokens(100)", "price": "R$ 0,50", "image": "public/ups/magnet-token.webp" },
-                { "name": "Fragmentos(1k)", "price": "R$ 0,75", "image": "public/ups/Fragmento.webp" },
-                { "name": "Haki lendário(cada)", "price": "R$ 6,50", "image": "public/ups/haki-lendario.webp" }
+                { "name": "Level", "price": "R$ 0,90", "image": "public/ups/level.png", "detail": "100 levels" },
+                { "name": "Maestria", "price": "R$ 0,70", "image": "public/ups/level.png", "detail": "100 levels de mastria" },
+                { "name": "Money", "price": "R$ 0,50", "image": "public/ups/money.webp", "detail": "1m de money" },
+                { "name": "Magnet Tokens", "price": "R$ 0,50", "image": "public/ups/magnet-token.webp", "detail": "100 tokens" },
+                { "name": "Fragmentos", "price": "R$ 0,75", "image": "public/ups/Fragmento.webp", "detail": "1k de fragmentos" },
+                { "name": "Haki lendário", "price": "R$ 6,50", "image": "public/ups/haki-lendario.webp", "detail": "cada haki" }
               ]
             },
             {
               "name": "ESTILOS DE LUTA",
               "items": [
-                { "name": "Sanguine Art(coração incluso)", "price": "R$ 20,00", "image": "public/ups/sanguine-art.webp" },
+                { "name": "Sanguine Art", "price": "R$ 20,00", "image": "public/ups/sanguine-art.webp", "detail": "coração incluso" },
                 { "name": "God Human", "price": "R$ 15,00", "image": "public/ups/god-human.webp" }
               ]
             },
             {
               "name": "ESPADAS E ARMAS",
               "items": [
-                { "name": "Mini Yoru/Yoru v3", "price": "R$ 25,00", "image": "public/ups/mini-yoru.webp" },
-                { "name": "True triple katana(espadas incluso)", "price": "R$ 10,00", "image": "public/ups/ttk.webp" },
+                { "name": "Mini Yoru", "price": "R$ 25,00", "image": "public/ups/mini-yoru.webp" },
+                { "name": "Ttk", "price": "R$ 10,00", "image": "public/ups/ttk.webp", "detail": "espadas incluso" },
                 { "name": "Tushita", "price": "R$ 6,00", "image": "public/ups/tushita.webp" },
                 { "name": "Yama", "price": "R$ 5,00", "image": "public/ups/yama.webp" },
-                { "name": "Cdk(espadas incluso)", "price": "R$ 15,00", "image": "public/ups/cdk.webp" },
+                { "name": "Cdk", "price": "R$ 15,00", "image": "public/ups/cdk.webp", "detail": "espadas incluso" },
                 { "name": "Shark Anchor", "price": "R$ 10,00", "image": "public/ups/shark-anchor.webp" },
                 { "name": "Foice sagrada", "price": "R$ 3,00", "image": "public/ups/foice-sagrada.webp" },
                 { "name": "Skull Guitar", "price": "R$ 6,00", "image": "public/ups/skull-guitar.webp" }
@@ -264,7 +365,7 @@
             {
               "name": "KITSUNE ISLAND",
               "items": [
-                { "name": "Fox Lamp", "price": "R$ 15,00", "image": "public/ups/fox-lamp.webp" },
+                { "name": "Fox Lamp", "price": "R$ 15,00", "image": "public/ups/fox-lamp.webp", "detail": "chance de ilha completa" },
                 { "name": "Kitsune Mask", "price": "R$ 6,00", "image": "public/ups/kitsune-mask.webp" },
                 { "name": "Kitsune Ribbon", "price": "R$ 7,00", "image": "public/ups/kitsune-ribbon.webp" }
               ]
@@ -272,8 +373,8 @@
             {
               "name": "VULCÃO/DOJO",
               "items": [
-                { "name": "Dragon Egg(1)", "price": "R$ 5,00", "image": "public/ups/dragon-egg.webp" },
-                { "name": "Dojo Belts(todas inclusas)", "price": "R$ 10,00", "image": "public/ups/dojo-belts.webp" },
+                { "name": "Dragon Egg", "price": "R$ 5,00", "image": "public/ups/dragon-egg.webp", "detail": "1 unidade" },
+                { "name": "Dojo Belts", "price": "R$ 10,00", "image": "public/ups/dojo-belts.webp", "detail": "todas as faixas" },
                 { "name": "Dragon Storm", "price": "R$ 7,00", "image": "public/ups/dragon-storm.webp" },
                 { "name": "Dragon Heart", "price": "R$ 6,00", "image": "public/ups/dragon-heart.webp" },
                 { "name": "Dino Hood", "price": "R$ 8,00", "image": "public/ups/dino-hood.webp" }
@@ -282,7 +383,7 @@
             {
               "name": "RAÇAS & V4",
               "items": [
-                { "name": "V4 Full Gear", "price": "R$ 15,00", "image": "public/ups/v4-ful-gear.webp" },
+                { "name": "V4 Full Gear", "price": "R$ 15,00", "image": "public/ups/v4-ful-gear.webp", "detail": "sem frag: R$ 20,00" },
                 { "name": "1 Gear", "price": "R$ 5,00", "image": "public/ups/v4-ful-gear.webp" },
                 { "name": "Miragem", "price": "R$ 5,00", "image": "public/ups/miragem.webp" },
                 { "name": "Draco V1~V3", "price": "R$ 10,00", "image": "public/ups/draco.webp" },
@@ -312,9 +413,9 @@
 
         const FRUITS_DATA = {
           "fruits": [
-            { "name": "Yellow Lightning", "price": "R$ 20,00", "image": "public/fruits/yellow-lightning.webp" },
-            { "name": "Tiger", "price": "R$ 10,00", "image": "public/fruits/tiger.webp" },
-            { "name": "Yeti", "price": "R$ 7,50", "image": "public/fruits/yeti.webp" },
+            { "name": "Yellow Lightning", "price": "R$ 20,00", "image": "public/fruits/yellow-lightning.webp", "detail": "Velocidade extrema" },
+            { "name": "Tiger", "price": "R$ 10,00", "image": "public/fruits/tiger.webp", "detail": "Poder bruto" },
+            { "name": "Yeti", "price": "R$ 7,50", "image": "public/fruits/yeti.webp", "detail": "Resistência gélida" },
             { "name": "Gás", "price": "R$ 5,00", "image": "public/fruits/gas.webp" },
             { "name": "Dough", "price": "R$ 4,00", "image": "public/fruits/dough.webp" },
             { "name": "Spirit", "price": "R$ 3,00", "image": "public/fruits/spirit.webp" },
@@ -360,7 +461,9 @@
             }
 
             // Lógica Mágica: Detecta se está abrindo o arquivo localmente ou em servidor (Vercel/Live Server)
-            const isLocal = window.location.protocol === 'file:';
+            const isLocal = window.location.protocol === 'file:' ||
+                            window.location.hostname === 'localhost' ||
+                            window.location.hostname === '127.0.0.1';
             let path = itemImageLink;
 
             if (isLocal) {
@@ -439,6 +542,7 @@
                             </div>
                             <div class="flex-1">
                                 <p class="font-semibold text-gray-200 group-hover:text-white transition-colors">${item.name}</p>
+                                ${item.detail ? `<p class="text-xs text-gray-400 mb-1">${item.detail}</p>` : ''}
                                 <p class="text-purpleGamer-accent font-bold">${item.price}</p>
                             </div>
                             <i data-lucide="chevron-right" class="text-gray-600 group-hover:text-purpleGamer-accent transition-colors size-4"></i>
@@ -490,7 +594,8 @@
                             </div>
                             ${img ? `<img src="${img}" class="relative z-10 w-full h-full object-contain p-4 group-hover:scale-110 transition-transform" onload="this.previousElementSibling.style.opacity='0'" onerror="this.style.display='none'">` : ''}
                         </div>
-                        <h3 class="text-2xl font-bold mb-2 group-hover:text-purpleGamer-accent transition-colors">${fruit.name}</h3>
+                        <h3 class="text-2xl font-bold mb-1 group-hover:text-purpleGamer-accent transition-colors">${fruit.name}</h3>
+                        ${fruit.detail ? `<p class="text-sm text-gray-400 mb-2">${fruit.detail}</p>` : ''}
                         <p class="text-xl font-bold text-purpleGamer-accent">${fruit.price}</p>
                     </div>
                 `;
@@ -500,7 +605,9 @@
         function renderRefs() {
             const container = document.getElementById('refsContainer');
             container.innerHTML = '';
-            const isLocal = window.location.protocol === 'file:';
+            const isLocal = window.location.protocol === 'file:' ||
+                            window.location.hostname === 'localhost' ||
+                            window.location.hostname === '127.0.0.1';
 
             for (let i = 1; i <= 10; i++) {
                 let path = `public/refs/ref-${i}.jpeg`;
@@ -516,13 +623,24 @@
                     </div>
                 `;
             }
+
+            // Card de "Mais Referências"
+            container.innerHTML += `
+                <div class="aspect-square glass rounded-2xl border border-dashed border-purpleGamer-accent/40 transition-all hover:border-purpleGamer-accent group cursor-pointer flex flex-col items-center justify-center p-4 text-center gap-2" onclick="showSection('contact')">
+                    <i data-lucide="plus-circle" class="text-purpleGamer-accent size-8 group-hover:scale-110 transition-transform"></i>
+                    <span class="text-gray-300 font-bold text-xs uppercase tracking-wider">Mais Refs<br>Disponíveis</span>
+                </div>
+            `;
+            lucide.createIcons();
         }
 
         function openLightbox(src) {
             const lb = document.getElementById('lightbox');
             const img = document.getElementById('lightboxImg');
 
-            const isLocal = window.location.protocol === 'file:';
+            const isLocal = window.location.protocol === 'file:' ||
+                            window.location.hostname === 'localhost' ||
+                            window.location.hostname === '127.0.0.1';
             let finalSrc = src;
             if (!isLocal && finalSrc.startsWith('public/')) {
                 finalSrc = finalSrc.replace('public/', '');
@@ -537,6 +655,22 @@
             const lb = document.getElementById('lightbox');
             lb.classList.add('hidden');
             lb.classList.remove('flex');
+        }
+
+        function toggleFaq(button) {
+            const answer = button.nextElementSibling;
+            const icon = button.querySelector('[data-lucide="chevron-down"]');
+
+            // Fecha outros abertos (opcional, mas fica mais profissional)
+            document.querySelectorAll('.faq-answer').forEach(el => {
+                if (el !== answer) {
+                    el.classList.add('hidden');
+                    el.previousElementSibling.querySelector('[data-lucide="chevron-down"]').style.transform = '';
+                }
+            });
+
+            answer.classList.toggle('hidden');
+            icon.style.transform = answer.classList.contains('hidden') ? '' : 'rotate(180deg)';
         }
 
         function filterUPS() {
