@@ -88,8 +88,26 @@
             <button onclick="showSection('contact')" class="px-5 py-2 bg-purpleGamer-accent text-white text-xs font-bold rounded-full uppercase tracking-tighter hover:bg-purpleGamer-neon transition-all purple-glow">
                 Comprar UPS
             </button>
+
+            <button onclick="toggleMenu()" class="md:hidden text-gray-400 hover:text-purpleGamer-accent transition-colors">
+                <i data-lucide="menu"></i>
+            </button>
         </div>
     </nav>
+
+    <div id="mobileMenu" class="fixed inset-0 z-[60] hidden flex-col items-center justify-center gap-8 glass bg-purpleGamer-dark/95 md:hidden">
+        <button onclick="toggleMenu()" class="absolute top-6 right-6 text-gray-400 hover:text-white">
+            <i data-lucide="x" size="32"></i>
+        </button>
+        <button onclick="showSection('home'); toggleMenu()" class="nav-link text-2xl font-bold uppercase tracking-widest text-gray-400">Início</button>
+        <button onclick="showSection('ups'); toggleMenu()" class="nav-link text-2xl font-bold uppercase tracking-widest text-gray-400">UPS / Preços</button>
+        <button onclick="showSection('fruits'); toggleMenu()" class="nav-link text-2xl font-bold uppercase tracking-widest text-gray-400">Frutas</button>
+        <button onclick="showSection('refs'); toggleMenu()" class="nav-link text-2xl font-bold uppercase tracking-widest text-gray-400">Referências</button>
+        <button onclick="showSection('contact'); toggleMenu()" class="nav-link text-2xl font-bold uppercase tracking-widest text-gray-400">Contato</button>
+        <button onclick="showSection('contact'); toggleMenu()" class="px-8 py-4 bg-purpleGamer-accent text-white font-bold rounded-full uppercase tracking-tighter purple-glow">
+            Comprar UPS
+        </button>
+    </div>
 
     <main class="pt-24 pb-12">
         <!-- Home Section -->
@@ -360,7 +378,23 @@
             return path;
         }
 
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                menu.classList.add('flex');
+            } else {
+                menu.classList.remove('flex');
+                menu.classList.add('hidden');
+            }
+        }
+
         function showSection(sectionId) {
+            const mobileMenu = document.getElementById('mobileMenu');
+            if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                toggleMenu();
+            }
+
             document.querySelectorAll('.section').forEach(s => s.classList.add('section-hidden'));
             const target = document.getElementById(sectionId);
             if (target) target.classList.remove('section-hidden');
